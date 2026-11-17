@@ -1,29 +1,56 @@
+#Riley Chaye-Shin
+
 # Task 1.1:
 #  Complete the function "read_two_ints" below:
 def read_two_ints():
-    # ADD a Docstring for this function
+    """Asks user for two integers and returns them"""
     # the return shown below is a placeholder to make sure this runs
     # TODO: complete the function instead of the line shown below
-    return 1, 2
+    num_1 = input("give me x: ")
+    a = int(num_1)
+    num_2 = input("give me y: ")
+    b = int(num_2)
+    
+    return a, b
+
+#This function asks the user for 2 ints and then returns them
 
 # Task 2.1:
 #  Complete the function "compute_multadd" below:
 def compute_multadd(a, b):
-    # ADD a Docstring for this function
+    """Calculates (a*b)/(a+b), prints both results, and returns quotient"""
     # the pass shown below is a placeholder to make sure this runs
     # TODO: complete the function instead of the line shown below
-    pass
+    mult_result = a*b
+    print("mult result:", mult_result)
+    
+    add_result = a+b
+    print("add result:", add_result)
+    
+    return mult_result / add_result
+
+#This function calculates the product and sum of a and b and then divides them
 
 # Task 3.1:
 #  Complete the function "print_fancy" below:
 def print_fancy(a, b, ab_multadd):
-    # ADD a Docstring for this function
-    # the pass shown below is a placeholder to make sure this runs
-    # TODO: complete the function instead of the line shown below
-    pass
+    """prints a and b, and then multadd result in fancy format"""
+    print("****************")
+    print("RESULTS:")
+    print("first number:", a)
+    print("second number:", b)
+    print("multadd result:", ab_multadd)
+    print("================")
+    
+#This function prints the result in a fancy layout
 
 def main ():
-    # ADD a Docstring for this function
+    """Reads two ints, then computes multadd, then prints formatted results"""
+    x, y = read_two_ints()
+    xy_multadd = compute_multadd(x, y)
+    print_fancy(x, y, xy_multadd)
+    
+
     # Task 1.2:
     #  Add one line below to call read_two_ints (note that it returns two values)
     #  the call should provide no arguments
